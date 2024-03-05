@@ -69,7 +69,7 @@ const estilos = StyleSheet.create({
         paddingHorizontal: 5,
         paddingVertical: 10,
         marginVertical: 10,
-        backgroundColor: '#284b63'
+        //backgroundColor: '#284b63'
     },
     containerCampos: {
         flex: 1
@@ -88,7 +88,7 @@ const estilos = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         height: 170,
-        // ,argin start é equivalente ao margin left
+        // margin start é equivalente ao margin left
         marginStart: 10,
         backgroundColor: '#590d22',
         // marginVertical: 5,
