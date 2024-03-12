@@ -2,22 +2,12 @@ import { useState } from "react"
 import { View, StyleSheet, TextInput, TouchableOpacity, Text } from "react-native"
 
 
-export function Formulario(){
+export function Formulario({adicionar}){
 
     // uma para leitura e outra para alteração
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [telefone, setTelefone] = useState('')
-
-    function adicionarUsuario(){
-        let novoUsuario = {
-            nome: nome,
-            email: email,
-            telefone: telefone
-        }
-
-        console.log(novoUsuario)
-    }
 
     // onChangeText - executado a cada alteração que acontece dentro o input
     // value - a informação que vai ser mostrada no input
@@ -53,7 +43,7 @@ export function Formulario(){
 
             <TouchableOpacity 
                 style={estilos.botao}
-                onPress={adicionarUsuario}
+                onPress={() => adicionar(nome,email,telefone)}
             >
                 <Text style={estilos.texto}>+</Text>
             </TouchableOpacity>

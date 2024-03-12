@@ -1,40 +1,32 @@
 import { View, StyleSheet , Text, FlatList} from "react-native"
 import { Usuario } from "./Usuario"
 
-export function Lista(){
-    const listaUsuarios = [
-        {
-            codigo: '1',
-            nome: 'Maria',
-            email: 'maria@gmail.com.br',
-            telefone:'(19) 12934-5678'
-        },
-        {
-            codigo: '2',
-            nome: 'Joao',
-            email: 'joao@gmail.com.br',
-            telefone:'(19) 99895-5678'
-        },
-        {
-            codigo: '3',
-            nome: 'Marcela',
-            email: 'marcela@gmail.com.br',
-            telefone:'(19) 91053-5678'
-        }
-    ]
+export function Lista({colecao, remover}){
     // {} dentro do javascript desestrutura o componente
+
+
+    // () => {} - arrow function expression
+    // quando é só um parametro fuca assim: x => console.log()
+
+
     return(
         <View>
             <FlatList 
-                data={ listaUsuarios }
-                keyExtractor={ (item) => {item.codigo} }
-                renderItem={ ({item}) => (
+                data = {colecao}
+                keyExtractor = {item => item.codigo}
+                renderItem = {({item}) => (
                     <Usuario 
                         nome={item.nome}
                         email={item.email}
                         telefone={item.telefone}
+                        remover={() => remover(item.codigo)}
                     />
-                ) }
+                )}
+                ListEmptyComponent={() => (
+                    <Text style={estilos.texto}>
+                        Nenhum usuario cadastrado
+                    </Text>
+                )}
             />
         </View>
     )
@@ -42,6 +34,10 @@ export function Lista(){
 const estilos = StyleSheet.create({
     texto: {
         color: '#fff',
-        paddingTop: 25
+        paddingTop: 25,
+        textAlign: 'center',
+        fontSize: 16
     },
 })
+
+// 
