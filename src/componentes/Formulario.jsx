@@ -18,7 +18,7 @@ export function Formulario({adicionar}){
         <View style={estilos.containerCampos}>
             <TextInput style={estilos.campo}
                 placeholder="Nome"
-                placeholderTextColor='#fff'
+                placeholderTextColor='#000'
                 keyboardType='default'
                 onChangeText={setNome}
                 value={nome}
@@ -26,7 +26,7 @@ export function Formulario({adicionar}){
 
             <TextInput style={estilos.campo}
                 placeholder="E-mail"
-                placeholderTextColor='#fff'
+                placeholderTextColor='#000'
                 keyboardType='email-address'
                 onChangeText={setEmail}
                 value={email}
@@ -34,7 +34,7 @@ export function Formulario({adicionar}){
 
             <TextInput style={estilos.campo}
                 placeholder="Telefone"
-                placeholderTextColor='#fff'
+                placeholderTextColor='#000'
                 keyboardType='phone-pad'
                 onChangeText={setTelefone}
                 value={telefone}
@@ -66,8 +66,8 @@ const estilos = StyleSheet.create({
     },
     campo: {
         height: 50,
-        backgroundColor: '#590d22',
-        color: '#fff',
+        backgroundColor: '#e5e5e5',
+        color: '#000',
         marginVertical: 5,
         padding: 10,
         borderRadius: 5,
@@ -80,14 +80,14 @@ const estilos = StyleSheet.create({
         height: 170,
         // margin start é equivalente ao margin left
         marginStart: 10,
-        backgroundColor: '#590d22',
+        backgroundColor: '#415a77',
         // marginVertical: 5,
         // padding: 10,
         borderRadius: 5,
         fontSize: 30
     },
     texto: {
-        color: '#fff',
+        color: '#000',
         fontSize: 26
     }
 })

@@ -44,6 +44,8 @@ export function Usuarios(){
 
             <Formulario adicionar={adicionarUsuario}/>
 
+            {/* <FormularioCadastro adicionar = {adicionarUsuario}/>*/}
+
             <Lista 
                 colecao={listaUsuarios}
                 remover={removerUsuario}
